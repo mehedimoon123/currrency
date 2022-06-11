@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Your Currency</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+
+<div class="container">
+
+
+   <center><h2><b><u>
+        COVERT YOUR CURRENCY</u>
+    </b></h2> </center>
+
+    
+    <form style="padding:20px;">
+        <div class="form-row">
+          <div class="col-3">
+            <input id="amount" type="text" class="form-control" placeholder="Amount">
+          </div>
+          <div class="col-3">
+            <!-- <input type="text" class="form-control" placeholder="From"> -->
+            <select id="from" class="form-control">
+<option disabled selected>
+
+    From
+</option>
+<option>
+
+    USD
+</option>
+<option>
+
+    BDT
+</option>
+<option>
+
+    INR
+</option>
+
+
+
+            </select>
+          </div>
+          <div class="col-3">
+            <!-- <input type="text" class="form-control" placeholder="To"> -->
+            <select id="to" class="form-control">
+                <option disabled selected>
+                
+             To
+                </option>
+                <option>
+                
+                    USD
+                </option>
+                <option>
+                
+                    BDT
+                </option>
+                <option>
+                
+                    INR
+                </option>
+                
+                
+                
+                            </select>
+          </div>
+          <div class="col-3">
+            <center><button onclick="conversion()" type="button" class="btn btn-primary">Convert</button></center>
+          </div>
+
+        </div>
+      </form>
+
+      <div class="col-9">
+        <input id="res" type="text" class="form-control" placeholder="Your Converted Amount is:">
+      </div>
+
+
+
+
+
+</div>
+  
+
+
+<script type="text/javascript">
+
+
+    alert("Welcome ");
+function conversion(){
+
+     var amount_ = document.getElementById("amount").value;
+
+     var from_ = document.getElementById("from").value;
+
+
+     var to_ = document.getElementById("to").value;
+
+
+
+     alert(amount_+""+from_+""+to_);
+var result = "Converted Amount is : ";
+     if(from_=="USD" && to_=="BDT")
+     {
+
+
+result = result + (amount_*100)
+document.getElementById("res").value = result;
+
+     }
+     if 
+     (from_=="USD" && to_=="USD")
+     {
+
+
+result = result + (amount_)
+document.getElementById("res").value = result;
+
+     }
+     if
+     (from_=="USD" && to_=="INR")
+     {
+
+
+result = result + (amount_*70)
+document.getElementById("res").value = result;
+
+     }
+
+if
+(from_=="BDT" && to_=="USD")
+     {
+
+
+result = result + (amount_*.01)
+document.getElementById("res").value = result;
+
+     }
+     if
+     (from_=="BDT" && to_=="BDT")
+     {
+
+
+result = result + (amount_*1)
+document.getElementById("res").value = result;
+
+     }
+     if 
+     (from_=="BDT" && to_=="INR")
+     {
+
+
+result = result + (amount_*.75)
+document.getElementById("res").value = result;
+
+     }
+     if
+     (from_=="INR" && to_=="INR")
+     {
+
+
+result = result + (amount_*1)
+document.getElementById("res").value = result;
+
+     }
+     if
+     (from_=="INR" && to_=="USD")
+     {
+
+
+result = result + (amount_*.014)
+document.getElementById("res").value = result;
+
+if(from_=="INR" && to_=="BDT")
+     {
+
+
+result = result + (amount_*1.33);
+alert("ok");
+document.getElementById("res").value = result;
+
+     }
+     }
+
+}
+
+</script>
+
+</body>
+</html>
